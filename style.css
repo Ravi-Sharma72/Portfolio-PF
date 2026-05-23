@@ -58,10 +58,122 @@ span{
     border: 2px solid #f1a90d; 
     color: #fff; /* Optional: ensures text stays readable over the red/orange gradient */
 }
-.menu a:hover{
-    
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
 }
 
-.menu a:hover ,.contact-btn a:hover{
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 100px;
+}
+
+.about-info{
+    text-align: left;
+}
+.about .about-info{
+    max-width: 600px;
+    text-align: center;
+}
+.about .about-info h1{
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.about .about-info p{
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 1.5;
+} 
+
+.about-info a{
+    text-decoration: none;
+}
+
+.about a{
     
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 30px;
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn{
+    margin-top: 40px;
+    padding: 10px 30px;
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.btn:hover {
+    background: linear-gradient(270deg, #ff0000, #ff7f00); /* Changed from background-color */
+}
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .about .about-info h1 {
+        font-size: 32px;
+    }
+    .about .about-info p {
+        font-size: 16px;
+    }
+}
+
+.about img{
+    width: 300px;
+    height: 300px;
+    border: 4px solid #f1a90d;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 50px;
+    box-shadow: 0px 22px 24px rgba(241, 169, 13, 999);
+    /* Animation Link: name | duration | easing function | stay at end state */
+    animation: landingFadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards; 
+    /* Start hidden so it doesn't flicker before the animation begins */
+    opacity: 0; 
+}
+
+/* 2. Define the landing animation rules */
+@keyframes landingFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px); /* Starts 40px lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Smoothly slides up to its natural position */
+    }
+}
+
+@media (max-width: 768px) {
+    .about img {
+        width: 200px;
+        height: 200px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
 }
