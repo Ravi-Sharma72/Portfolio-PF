@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    color: #fff;
+    background-color: #000;
+    
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.header .logo{
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+span{
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.menu {
+    display: flex;
+    gap: 20px;
+
+   
+}
+
+.menu a ,.contact-btn a{
+    padding: 8px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.contact-btn a {
+    
+    border: 2px solid #f1a90d;
+    display: inline-block; /* Essential for padding to respect borders on <a> tags */
+    transition: background 0.3s ease; /* Optional: makes the color shift smooth instead of instant */
+}
+
+.contact-btn a:hover ,.menu a:hover {
+    background: linear-gradient(270deg, #ff0000, #ff7f00); /* Changed from background-color */
+    border: 2px solid #f1a90d; 
+    color: #fff; /* Optional: ensures text stays readable over the red/orange gradient */
+}
+.menu a:hover{
+    
+}
+
+.menu a:hover ,.contact-btn a:hover{
+    
+}
