@@ -314,3 +314,111 @@ span{
         grid-template-columns: 1fr; /* 1 box per row on mobile phones */
     }
 }
+
+
+/* projects section */
+
+/* ==========================================================================
+   Projects Section Container
+   ========================================================================== */
+.projects {
+    padding: 80px 40px; /* Vertical padding | Horizontal spacing around the section */
+    max-width: 1300px;  /* Limits max layout width on wide screens */
+    margin: 0 auto;     /* Centers the entire section box with equal space on left and right */
+}
+
+.projects h2 {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff; 
+}
+
+/* ==========================================================================
+   3-Column Grid Layout (Using repeat 3, 1fr)
+   ========================================================================== */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates exactly 3 columns of equal size */
+    gap: 40px; /* Uniform grid spacing (gutters) between cards */
+}
+
+/* ==========================================================================
+   Individual Card Design
+   ========================================================================== */
+.project {
+    display: flex;
+    flex-direction: column; /* Stacks elements inside the card vertically */
+    background: #1e1e1e;   /* Clean dark card contrast background */
+    border-radius: 12px;
+    overflow: hidden;      /* Keeps zoomed image contained inside border corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Highlights */
+.project:hover {
+    transform: translateY(-8px); /* Card lifts up smoothly on hover */
+    box-shadow: 0 15px 35px rgba(241, 169, 13, 0.25); /* Glowing theme-matching accent shadow */
+}
+
+/* Project Image Configuration */
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Prevents image distortion */
+    transition: transform 0.4s ease;
+}
+
+.project:hover img {
+    transform: scale(1.04); /* Subtle smooth zoom depth effect */
+}
+
+/* ==========================================================================
+   Inner Content Styling (Padding & Space Around Elements)
+   ========================================================================== */
+.project h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #f1a90d; /* Theme gold accent */
+    margin: 25px 25px 12px 25px; /* Clean text boundaries */
+}
+
+.project p {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0 25px 25px 25px;
+    flex-grow: 1; /* Pushes the button downwards if paragraph sizes vary */
+}
+
+/* Target Button Container Anchor Link */
+.project .btn {
+    align-self: flex-start; /* Stops the button wrapper from stretching full-width */
+    margin: 0 25px 25px 25px; 
+    padding: 10px 24px;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints (Tablet & Mobile Adaptive UI)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .project-container {
+        grid-template-columns: repeat(2, 1fr); /* Switches to 2 cards per row on tablets */
+        gap: 30px;
+    }
+    .projects {
+        padding: 60px 20px; /* Reduces outer side padding on smaller viewports */
+    }
+}
+
+@media (max-width: 650px) {
+    .project-container {
+        grid-template-columns: 1fr; /* Drops to 1 card per row for standard smartphones */
+    }
+    .projects h2 {
+        font-size: 28px;
+    }
+}
