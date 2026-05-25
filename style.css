@@ -451,7 +451,7 @@ span{
 .contact .btn:hover {
     background: linear-gradient(270deg, #ff0000, #ff7f00); 
     color: #fff;
-    
+
 }
 
 /* ==========================================================================
@@ -546,5 +546,71 @@ span{
     .contact h2 {
         font-size: 28px;
         margin-bottom: 30px;
+    }
+}
+
+
+/* footer section */
+
+/* ==========================================================================
+   Footer Section Layout
+   ========================================================================== */
+.footer {
+    background: #111111;    /* Slightly darker contrast layer to anchor the page base */
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Soft divider line */
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Stacks social icons on top, copyright at the bottom */
+    align-items: center;
+    gap: 20px;              /* Clean gap spacing separating elements */
+}
+
+/* Reusing your social links container with custom positioning for footer */
+.footer .social-links {
+    margin-top: 0;          /* Overrides previous variations */
+    justify-content: center;
+}
+
+/* Applying your custom zoom-out and hover mechanics */
+.footer .social-links a i {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease;
+}
+
+.footer .social-links a:hover i {
+    transform: scale(0.85); /* Scales down on hover exactly like your header/about layout */
+    color: #f1a90d;        /* Theme accent gold glow */
+}
+
+/* ==========================================================================
+   Copyright Typography
+   ========================================================================== */
+.footer-copyright p {
+    font-size: 15px;
+    color: #888888;         /* Subtle muted tone for administrative strings */
+    letter-spacing: 0.5px;
+}
+
+/* Gold highlighted name styling */
+.footer-copyright p span {
+    color: #f1a90d;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   Responsive Breakpoint (Mobile Optimization)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .footer {
+        padding: 30px 15px;
+    }
+    
+    .footer-copyright p {
+        font-size: 14px;    /* Slightly tighter layout for smartphone screens */
+        line-height: 1.4;
     }
 }
