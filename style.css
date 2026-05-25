@@ -422,3 +422,129 @@ span{
         font-size: 28px;
     }
 }
+
+/* contact section */
+.contact {
+    padding: 80px 40px;
+    background: #1e1e1e;
+}
+.contact h2 {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+}
+.contact p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #ccc;    
+}
+.contact .btn {
+    display: block;
+    margin: 0 auto; /* Centers the button horizontally */
+    padding: 12px 30px;
+    font-size: 18px;
+}
+.contact .btn:hover {
+    background: linear-gradient(270deg, #ff0000, #ff7f00); 
+    color: #fff;
+    
+}
+
+/* ==========================================================================
+   Contact Section Layout
+   ========================================================================== */
+.contact {
+    padding: 100px 20px;
+    max-width: 600px; /* Restricts form width so it doesn't stretch too wide on desktop */
+    margin: 0 auto;   /* Centers the entire contact block perfectly on the screen */
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+/* ==========================================================================
+   Form & Input Element Styling
+   ========================================================================== */
+.contact form {
+    display: flex;
+    flex-direction: column; /* Stacks inputs and textarea vertically */
+    gap: 20px;              /* Uniform spacing between input fields */
+    background: #1e1e1e;    /* Matches the dark background of your project cards */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Base styles for both inputs and the textarea box */
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: #2d2d2d;     /* Slightly lighter dark background for input depth */
+    color: #fff;             /* White text when user types */
+    font-size: 16px;
+    border: 2px solid transparent; /* Hidden border by default to prevent layout jump on focus */
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;    /* Inherits your portfolio's main font */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Specific styling to give the message box clean height */
+.contact form textarea {
+    height: 150px;
+    resize: none;            /* Disables manual resizing to preserve form design integrity */
+}
+
+/* Focus Highlight: Changes border to your theme's gold accent when clicked */
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: #f1a90d;
+    box-shadow: 0 0 10px rgba(241, 169, 13, 0.2);
+}
+
+/* Styling the placeholder text color */
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+    color: #888;
+}
+
+/* ==========================================================================
+   Submit Button Customization
+   ========================================================================== */
+.contact form .btn {
+    align-self: center;     /* Centers the button horizontally inside the flex form */
+    width: 100%;            /* Makes it full width inside the form card */
+    max-width: 200px;       /* Restricts it from becoming overly wide */
+    margin-top: 10px;
+    padding: 12px 30px;
+    border: none;           /* Ensures default HTML button borders are removed */
+    font-family: inherit;
+}
+
+/* ==========================================================================
+   Responsive Breakpoint (Mobile Viewports)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .contact {
+        padding: 60px 15px;
+    }
+    
+    .contact form {
+        padding: 25px 20px; /* Reduces inner spacing on smaller screens */
+    }
+    
+    .contact h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+}
